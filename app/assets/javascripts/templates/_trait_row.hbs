@@ -1,0 +1,25 @@
+<div class="trait-row grid-row js-trait-row">
+  <span class="delete-button js-delete-trait">✖</span>
+  <span class="assign-products js-assign-products" data-id="{{id}}">Привязать товары</span>
+  <div class="grid-col-uv-12 js-trait">
+    <input type="hidden" name="id" value="{{id}}">
+    <div class="mb-5">
+      <label>Name: </label>
+      <input name="name" type="text" value="{{name}}" required>
+    </div>
+    <div class="mb-5">
+      <label>Slug: </label>
+      <input name="slug" type="text" value="{{slug}}" required>
+    </div>
+  </div>
+  <div class="grid-col-uv-12">
+    <div class="js-trait-values">
+      {{#each values}}
+        {{> _trait_value}}
+      {{/each}}
+    </div>
+    <div>
+      <span class="dashed-link js-add-trait-value">Добавить значение</span>
+    </div>
+  </div>
+</div>

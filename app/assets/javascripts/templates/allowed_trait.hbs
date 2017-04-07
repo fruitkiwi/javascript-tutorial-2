@@ -1,0 +1,12 @@
+{{#each traits}}
+<div class="allowed-trait js-allowed-trait" data-id="{{id}}">
+  <div class="allowed-trait-name">{{name}}</div>
+  {{#each values}}
+  <div class="allowed-trait-value">
+    <label>
+      <input type="checkbox" value="{{id}}" {{#if checked}}checked="checked"{{/if}} class="allowed-trait-box js-allowed-trait-value">{{value}}
+    </label>
+  </div>
+  {{/each}}
+</div>
+{{/each}}

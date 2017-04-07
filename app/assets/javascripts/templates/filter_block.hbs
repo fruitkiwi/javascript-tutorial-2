@@ -1,0 +1,17 @@
+{{#with trait}}
+<div class="filter-block">
+  <div class="filter-title">
+    {{name}}
+  </div>
+  <div class="filter-values">
+    {{#each values}}
+    <div>
+      <label>
+        <input name="{{../slug}}" type="checkbox" value="{{this.id}}" class="js-filter">
+        {{this.value}}
+      </label>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/with}}

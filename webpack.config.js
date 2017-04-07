@@ -36,7 +36,7 @@ module.exports = {
 
         item = Object.assign(item, data);
 
-        if (item.values.length === data.values.length)
+        //if (item.values.length === data.values.length) ???
 
         _saveToFile('products');
         return item;
@@ -117,12 +117,12 @@ module.exports = {
 
       function _updateTraits(traits) {
         traits.forEach((trait) => {
-          if (trait.id === 'undefined') {
+          if (typeof trait.id === 'undefined') {
             trait.id = _generateId();
           }
 
           trait.values.forEach((value) => {
-            if (value.id === 'undefined') {
+            if (typeof value.id === 'undefined') {
               value.id = _generateId();
             }
           });

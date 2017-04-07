@@ -1,0 +1,21 @@
+<form action="/">
+  <div class="grid-row">
+    <div class="grid-col-uv-12">
+      <h2>Names</h2>
+    </div>
+    <div class="grid-col-uv-12">
+      <h2>Values</h2>
+    </div>
+  </div>
+  <div class="js-traits">
+    {{#each traits}}
+      {{> _trait_row}}
+    {{/each}}
+  </div>
+  <div>
+    <span class="dashed-link js-add-trait">Добавить характеристику</span>
+  </div>
+  <div class="submit-block">
+    <input type="submit" value="Save" class="js-traits-submit">
+  </div>
+</form>

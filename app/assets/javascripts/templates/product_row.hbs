@@ -1,0 +1,8 @@
+<div class="product-row">
+  {{#with product}}
+  <label>
+    <input type="checkbox" value="{{id}}" {{#if checked}}checked="checked"{{/if}} class="js-product-item">
+    {{name}}
+  </label>
+  {{/with}}
+</div>
